@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bbbjrq6sac2rj"]
+
+[ext_resource type="Script" uid="uid://cpwlca0nqksv4" path="res://MissileSpawner/misslespawner.gd" id="1_mrmcu"]
+
+[node name="Misslespawner" type="Node2D" unique_id=602751251]
+script = ExtResource("1_mrmcu")
+
+[node name="Spawntimer" type="Timer" parent="." unique_id=1674418837]
+
+[node name="Missiles" type="Node2D" parent="." unique_id=541686141]
+
+[connection signal="timeout" from="Spawntimer" to="." method="_on_spawntimer_timeout"]
