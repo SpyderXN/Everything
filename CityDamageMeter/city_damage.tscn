@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bc3udvfd671u8"]
+
+[ext_resource type="Script" uid="uid://fa3ab53ql3nl" path="res://CityDamageMeter/city_damage.gd" id="1_x7hos"]
+
+[node name="CityDamage" type="Control" unique_id=2094292644]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x7hos")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1552600197]
+layout_mode = 0
+offset_right = 245.0
+offset_bottom = 27.0
+show_percentage = false

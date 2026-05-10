@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d1tl6cl68yt8v"]
+
+[ext_resource type="Texture2D" uid="uid://ci2w1iioxvkyx" path="res://icon.svg" id="1_u6pv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3byrw"]
+size = Vector2(508, 38)
+
+[node name="City" type="StaticBody2D" unique_id=1454666087 groups=["City"]]
+collision_layer = 8
+collision_mask = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1085089718]
+position = Vector2(-6, 1)
+scale = Vector2(27.77734, 0.21875001)
+texture = ExtResource("1_u6pv0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=771983740]
+shape = SubResource("RectangleShape2D_3byrw")

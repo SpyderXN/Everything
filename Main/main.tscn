@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://cw7gmknqp0s4u"]
 
+[ext_resource type="Script" uid="uid://dk5aqpc8su5a1" path="res://Main/main.gd" id="1_ib3t1"]
 [ext_resource type="PackedScene" uid="uid://cjm8kwy8lq4hl" path="res://Turret/turret.tscn" id="1_yh5la"]
 [ext_resource type="PackedScene" uid="uid://ebp10j03e1p0" path="res://Missiles/missiles.tscn" id="2_2w1kt"]
 [ext_resource type="PackedScene" uid="uid://bbbjrq6sac2rj" path="res://MissileSpawner/misslespawner.tscn" id="2_qvhan"]
 [ext_resource type="PackedScene" uid="uid://ctvt2jtsueil2" path="res://EnergyMeter/energy_meter.tscn" id="4_eunhr"]
+[ext_resource type="PackedScene" uid="uid://d1tl6cl68yt8v" path="res://City/city.tscn" id="4_liyct"]
+[ext_resource type="PackedScene" uid="uid://bc3udvfd671u8" path="res://CityDamageMeter/city_damage.tscn" id="6_ib3t1"]
 
 [node name="Main" type="Node2D" unique_id=440118228]
+script = ExtResource("1_ib3t1")
+
+[node name="City" parent="." unique_id=1454666087 instance=ExtResource("4_liyct")]
+position = Vector2(270, 534)
 
 [node name="Misslespawner" parent="." unique_id=602751251 instance=ExtResource("2_qvhan")]
 position = Vector2(238, 129)
@@ -17,3 +24,10 @@ position = Vector2(581, 584)
 [node name="UI" type="CanvasLayer" parent="." unique_id=474741474]
 
 [node name="EnergyMeter" parent="UI" unique_id=534291620 instance=ExtResource("4_eunhr")]
+
+[node name="CityDamage" parent="UI" unique_id=2094292644 instance=ExtResource("6_ib3t1")]
+
+[node name="SurvivalTimer" type="Timer" parent="." unique_id=1445756576]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1701153069]
+position = Vector2(321, 181)
