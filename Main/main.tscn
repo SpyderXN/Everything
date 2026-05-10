@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cw7gmknqp0s4u"]
+
+[ext_resource type="PackedScene" uid="uid://cjm8kwy8lq4hl" path="res://Turret/turret.tscn" id="1_yh5la"]
+
+[node name="Main" type="Node2D" unique_id=440118228]
+
+[node name="Turret" parent="." unique_id=547628795 instance=ExtResource("1_yh5la")]
+position = Vector2(581, 584)
