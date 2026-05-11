@@ -2,6 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cbyy7nw1s55ay" path="res://Missiles/missiles.gd" id="1_41vea"]
 [ext_resource type="Texture2D" uid="uid://cgarbux8pmd4q" path="res://Assets/Everything/Missile.png" id="2_41vea"]
+[ext_resource type="Texture2D" uid="uid://dm4eigl6edpgi" path="res://Assets/Everything/Flares.png" id="2_kmfcf"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_41vea"]
+lifetime_randomness = 0.32
+particle_flag_disable_z = true
+gravity = Vector3(0, -25, 0)
+scale_min = 0.5
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kmfcf"]
 radius = 7.0
@@ -11,6 +18,19 @@ height = 28.0
 collision_layer = 4
 collision_mask = 10
 script = ExtResource("1_41vea")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=808062603]
+position = Vector2(0, -16)
+amount = 150
+amount_ratio = 0.08
+texture = ExtResource("2_kmfcf")
+lifetime = 1.68
+interp_to_end = 0.017
+speed_scale = 5.58
+randomness = 0.61
+fixed_fps = 60
+trail_lifetime = 0.77
+process_material = SubResource("ParticleProcessMaterial_41vea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=776116487]
 texture_filter = 1

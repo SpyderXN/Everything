@@ -1,20 +1,32 @@
 [gd_scene format=3 uid="uid://bstx8p7mgrxv8"]
 
-[node name="Menu" type="CanvasLayer" unique_id=541620010]
+[ext_resource type="Script" uid="uid://22qoqvun8dwt" path="res://Menu/menu.gd" id="1_raj00"]
+[ext_resource type="Texture2D" uid="uid://cdulcoy0qdqia" path="res://Assets/Everything/Sky.png" id="1_rwxi6"]
+[ext_resource type="Texture2D" uid="uid://ctpfnicew4sx0" path="res://Assets/Everything/Logo.png" id="2_ihied"]
 
-[node name="Label" type="Label" parent="." unique_id=1967394326]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -63.5
-offset_top = -179.5
-offset_right = 63.5
-offset_bottom = -156.5
+[node name="Menu" type="CanvasLayer" unique_id=541620010]
+script = ExtResource("1_raj00")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2046942085]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -187.0
+offset_top = -268.0
+offset_right = 248.0
+offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "UNTITLED GAME"
+texture = ExtResource("1_rwxi6")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=21571191]
+offset_left = 169.0
+offset_top = -126.0
+offset_right = 791.0
+offset_bottom = 471.0
+texture = ExtResource("2_ihied")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1064694977]
 anchors_preset = 8
@@ -22,17 +34,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -140.0
-offset_top = -69.0
-offset_right = 179.0
-offset_bottom = 72.0
+offset_left = -167.0
+offset_top = -51.0
+offset_right = 152.0
+offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 25
 alignment = 1
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=447876611]
 texture_filter = 1
 layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.38431373, 0.8039216, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
 text = "Start"
 flat = true
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=343205185]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.38431373, 0.8039216, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

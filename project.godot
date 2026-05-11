@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Everything-has-a-cost"
-run/main_scene="uid://cw7gmknqp0s4u"
+run/main_scene="uid://bstx8p7mgrxv8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Globals="*uid://cvy7cq226vkr"
+TransitionLayer="*uid://cw24m7wet0wk"
 
 [display]
 

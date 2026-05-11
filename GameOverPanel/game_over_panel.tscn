@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cijj3bol3ejng"]
 
 [ext_resource type="Texture2D" uid="uid://ddei1ihox3h1w" path="res://Assets/Everything/Button.png" id="1_i46km"]
+[ext_resource type="Script" uid="uid://dy3ce6b6vax6u" path="res://GameOverPanel/game_over_panel.gd" id="1_whkte"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_whkte"]
 texture = ExtResource("1_i46km")
@@ -9,17 +10,11 @@ texture_margin_top = 32.0
 texture_margin_right = 32.0
 texture_margin_bottom = 32.0
 
-[node name="GameOverPanel" type="Control" unique_id=1832782077]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GameOverPanel" type="CanvasLayer" unique_id=217020337]
+script = ExtResource("1_whkte")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=826984203]
 texture_filter = 1
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -40,7 +35,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1136453415]
 layout_mode = 2
-text = "XYZ"
+text = "DUE TO TIME ISSUE THE SECTION IS NOT FINISHED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -49,10 +44,13 @@ layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=256921410]
+[node name="Play" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=256921410]
 layout_mode = 2
-text = "START"
+text = "PLAY AGAIN"
 
-[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=646356136]
+[node name="Exit" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=646356136]
 layout_mode = 2
 text = "EXIT"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]

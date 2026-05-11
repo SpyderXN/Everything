@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dk5aqpc8su5a1" path="res://Main/main.gd" id="1_ib3t1"]
 [ext_resource type="PackedScene" uid="uid://cjm8kwy8lq4hl" path="res://Turret/turret.tscn" id="1_yh5la"]
+[ext_resource type="Texture2D" uid="uid://cdulcoy0qdqia" path="res://Assets/Everything/Sky.png" id="2_f3gf5"]
 [ext_resource type="PackedScene" uid="uid://b4g5sk7ix5lc3" path="res://MissileSpawner-1/misslespawner_1.tscn" id="3_ib3t1"]
 [ext_resource type="PackedScene" uid="uid://ctvt2jtsueil2" path="res://EnergyMeter/energy_meter.tscn" id="4_eunhr"]
 [ext_resource type="PackedScene" uid="uid://d13d1w7h2tgib" path="res://MissileSpawner-2/misslespawner_2.tscn" id="4_f6fdm"]
@@ -14,6 +15,18 @@
 
 [node name="Main" type="Node2D" unique_id=440118228]
 script = ExtResource("1_ib3t1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=913071817]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -446.0
+offset_right = 1440.0
+offset_bottom = 634.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_f3gf5")
 
 [node name="City" parent="." unique_id=1454666087 instance=ExtResource("4_liyct")]
 position = Vector2(438, 577)

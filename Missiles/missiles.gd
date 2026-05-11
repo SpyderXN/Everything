@@ -2,9 +2,12 @@ extends Area2D
 
 @export var speed = 500
 @onready var camera: Camera2D = get_tree().get_first_node_in_group("Camera")
+@onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 
 func _process(delta: float) -> void:
 	position += transform.y * speed * delta
+	
+	gpu_particles_2d.rotation = rotation
 
 
 func _on_body_entered(body: Node2D) -> void:
