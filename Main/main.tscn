@@ -2,24 +2,40 @@
 
 [ext_resource type="Script" uid="uid://dk5aqpc8su5a1" path="res://Main/main.gd" id="1_ib3t1"]
 [ext_resource type="PackedScene" uid="uid://cjm8kwy8lq4hl" path="res://Turret/turret.tscn" id="1_yh5la"]
-[ext_resource type="PackedScene" uid="uid://ebp10j03e1p0" path="res://Missiles/missiles.tscn" id="2_2w1kt"]
-[ext_resource type="PackedScene" uid="uid://bbbjrq6sac2rj" path="res://MissileSpawner/misslespawner.tscn" id="2_qvhan"]
+[ext_resource type="PackedScene" uid="uid://b4g5sk7ix5lc3" path="res://MissileSpawner-1/misslespawner_1.tscn" id="3_ib3t1"]
 [ext_resource type="PackedScene" uid="uid://ctvt2jtsueil2" path="res://EnergyMeter/energy_meter.tscn" id="4_eunhr"]
+[ext_resource type="PackedScene" uid="uid://d13d1w7h2tgib" path="res://MissileSpawner-2/misslespawner_2.tscn" id="4_f6fdm"]
 [ext_resource type="PackedScene" uid="uid://d1tl6cl68yt8v" path="res://City/city.tscn" id="4_liyct"]
+[ext_resource type="PackedScene" uid="uid://onohtrcs51sf" path="res://FastMissile/fast_missile.tscn" id="4_qac2q"]
+[ext_resource type="PackedScene" uid="uid://dp81cakm50k1n" path="res://SlowMissile/slow_missile.tscn" id="5_o60nc"]
+[ext_resource type="PackedScene" uid="uid://btkxvllv8ceid" path="res://MediumMissile/medium_missile.tscn" id="6_f3gf5"]
 [ext_resource type="PackedScene" uid="uid://bc3udvfd671u8" path="res://CityDamageMeter/city_damage.tscn" id="6_ib3t1"]
+[ext_resource type="Script" uid="uid://d26cil16w7yog" path="res://Main/camera_2d.gd" id="11_o60nc"]
 
 [node name="Main" type="Node2D" unique_id=440118228]
 script = ExtResource("1_ib3t1")
 
 [node name="City" parent="." unique_id=1454666087 instance=ExtResource("4_liyct")]
-position = Vector2(270, 534)
+position = Vector2(438, 577)
 
-[node name="Misslespawner" parent="." unique_id=602751251 instance=ExtResource("2_qvhan")]
-position = Vector2(238, 129)
-missiles = Array[PackedScene]([ExtResource("2_2w1kt")])
+[node name="Spawners" type="Node2D" parent="." unique_id=1556052971]
+
+[node name="Misslespawner-1" parent="Spawners" unique_id=602751251 instance=ExtResource("3_ib3t1")]
+position = Vector2(0, -200.00002)
+rotation = -0.16410488
+missiles = Array[PackedScene]([ExtResource("4_qac2q"), ExtResource("5_o60nc"), ExtResource("6_f3gf5")])
+high_range = 500.0
+low_range = -100.0
+
+[node name="Misslespawner-2" parent="Spawners" unique_id=112879467 instance=ExtResource("4_f6fdm")]
+position = Vector2(0, -247.99998)
+rotation = 0.1188704
+missiles = Array[PackedScene]([ExtResource("6_f3gf5"), ExtResource("5_o60nc"), ExtResource("4_qac2q")])
+high_range = 1050.0
+low_range = 700.0
 
 [node name="Turret" parent="." unique_id=547628795 instance=ExtResource("1_yh5la")]
-position = Vector2(581, 584)
+position = Vector2(456, 532)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=474741474]
 
@@ -29,5 +45,9 @@ position = Vector2(581, 584)
 
 [node name="SurvivalTimer" type="Timer" parent="." unique_id=1445756576]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1701153069]
-position = Vector2(321, 181)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1701153069 groups=["Camera"]]
+position = Vector2(481, 269)
+zoom = Vector2(0.975, 0.975)
+script = ExtResource("11_o60nc")
+max_shake = 2.0
+shake_fade = 2.0

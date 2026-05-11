@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dp81cakm50k1n"]
+
+[ext_resource type="PackedScene" uid="uid://ebp10j03e1p0" path="res://Missiles/missiles.tscn" id="1_a3wa6"]
+
+[node name="SlowMissile" unique_id=2007906376 instance=ExtResource("1_a3wa6")]
+speed = 55

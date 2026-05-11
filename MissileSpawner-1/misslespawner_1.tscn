@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b4g5sk7ix5lc3"]
+
+[ext_resource type="PackedScene" uid="uid://bbbjrq6sac2rj" path="res://MissileSpawner/misslespawner.tscn" id="1_ky2dm"]
+
+[node name="Misslespawner-1" unique_id=602751251 instance=ExtResource("1_ky2dm")]
+
+[node name="Spawntimer" parent="." index="0" unique_id=1674418837]
+wait_time = 3.5

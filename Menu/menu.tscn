@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bstx8p7mgrxv8"]
+
+[node name="Menu" type="CanvasLayer" unique_id=541620010]
+
+[node name="Label" type="Label" parent="." unique_id=1967394326]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -179.5
+offset_right = 63.5
+offset_bottom = -156.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "UNTITLED GAME"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1064694977]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -69.0
+offset_right = 179.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=447876611]
+texture_filter = 1
+layout_mode = 2
+text = "Start"
+flat = true

@@ -11,16 +11,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vtj52")
 
+[node name="Label" type="Label" parent="." unique_id=549509337]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -158.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "ENERGY FROM CITY"
+horizontal_alignment = 1
+
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1588005607]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 22.0
-offset_top = -75.0
-offset_right = 516.0
-offset_bottom = -27.0
-grow_vertical = 0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 31.0
+offset_right = -17.0
+offset_bottom = 36.0
+grow_horizontal = 0
 show_percentage = false
 
 [node name="Energytimer" type="Timer" parent="." unique_id=1868632508]

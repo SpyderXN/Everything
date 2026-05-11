@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://ddbwhclq2be74"]
 
-[ext_resource type="Texture2D" uid="uid://ci2w1iioxvkyx" path="res://icon.svg" id="1_n3g7m"]
 [ext_resource type="Script" uid="uid://cal6spph55afa" path="res://Gun/gun.gd" id="1_yf33g"]
+[ext_resource type="Texture2D" uid="uid://b8n1fnr8swyfa" path="res://Assets/Everything/Barrel.png" id="2_yf33g"]
 
 [node name="Gun" type="Node2D" unique_id=266722727]
 script = ExtResource("1_yf33g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1885383865]
-position = Vector2(144, -3.5)
-scale = Vector2(1, 0.1953125)
-texture = ExtResource("1_n3g7m")
+texture_filter = 1
+position = Vector2(68, 3.5)
+rotation = 1.5707964
+texture = ExtResource("2_yf33g")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1752313673]
-position = Vector2(221, 8.415209e-07)
+position = Vector2(89, 4)

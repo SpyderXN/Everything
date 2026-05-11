@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://btkxvllv8ceid"]
+
+[ext_resource type="PackedScene" uid="uid://ebp10j03e1p0" path="res://Missiles/missiles.tscn" id="1_pekhw"]
+
+[node name="MediumMissile" unique_id=2007906376 instance=ExtResource("1_pekhw")]
+speed = 70

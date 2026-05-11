@@ -3,6 +3,10 @@ extends Node2D
 @export var missiles: Array[PackedScene]
 @onready var missiles_child: Node2D = $Missiles
 @onready var spawntimer: Timer = $Spawntimer
+
+@export var high_range: float
+@export var low_range: float
+
 var can_spawn = true
 
 
@@ -11,8 +15,8 @@ func _process(_delta: float) -> void:
 		can_spawn = false
 		spawntimer.start()
 		var missile_scene = missiles[randi() % missiles.size()].instantiate()
+		missile_scene.position.x = randf_range(low_range, high_range)
 		missiles_child.add_child(missile_scene)
-		missile_scene.global_position = position
 		missile_scene.rotation = rotation
 
 

@@ -1,18 +1,28 @@
-[gd_scene format=3 uid="uid://d1tl6cl68yt8v"]
+[gd_scene format=4 uid="uid://d1tl6cl68yt8v"]
 
-[ext_resource type="Texture2D" uid="uid://ci2w1iioxvkyx" path="res://icon.svg" id="1_u6pv0"]
+[ext_resource type="Texture2D" uid="uid://2xx06ujk8xo" path="res://Assets/Everything/City.png" id="1_u6pv0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3byrw"]
-size = Vector2(508, 38)
+size = Vector2(832, 25)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd8a4"]
+texture = ExtResource("1_u6pv0")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bgqli"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_gd8a4")
 
 [node name="City" type="StaticBody2D" unique_id=1454666087 groups=["City"]]
 collision_layer = 8
 collision_mask = 6
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1085089718]
-position = Vector2(-6, 1)
-scale = Vector2(27.77734, 0.21875001)
-texture = ExtResource("1_u6pv0")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=771983740]
+position = Vector2(32, -13.5)
 shape = SubResource("RectangleShape2D_3byrw")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1775068596]
+tile_map_data = PackedByteArray("AAD6////AQAAAAAAAAD7////AQABAAAAAAD8////AQAAAAAAAAD9////AQABAAAAAAD+////AQAAAAAAAAD/////AQABAAAAAAAAAP//AQAAAAAAAAABAP//AQABAAAAAAACAP//AQAAAAAAAAADAP//AQABAAAAAAAEAP//AQAAAAAAAAAFAP//AQABAAAAAAAGAP//AQAAAAAAAAAHAP//AQABAAAAAAD4////AQAAAAAAAAD5////AQABAAAAAAD2////AQAAAAAAAAD3////AQABAAAAAAD0////AQABAAAAAAD1////AQABAAAAAAAIAP//AQAAAAAAAAAJAP//AQABAAAAAAAKAP//AQAAAAAAAAALAP//AQABAAAAAAAMAP//AQAAAAAAAAANAP//AQABAAAAAADr////AQAAAAAAAADs////AQABAAAAAADt////AQAAAAAAAADu////AQABAAAAAADv////AQAAAAAAAADw////AQABAAAAAADx////AQAAAAAAAADy////AQABAAAAAADz////AQAAAAAAAAAOAP//AQAAAAAAAAAPAP//AQABAAAAAAAQAP//AQAAAAAAAAARAP//AQABAAAAAAASAP//AQAAAAAAAAATAP//AQABAAAAAAAUAP//AQAAAAAAAAAVAP//AQABAAAAAAAWAP//AQAAAAAAAAAXAP//AQABAAAAAAA=")
+tile_set = SubResource("TileSet_bgqli")
